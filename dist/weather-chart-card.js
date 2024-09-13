@@ -18759,8 +18759,9 @@ updateChart({ forecasts, forecastChart } = this) {
           inset-inline-start: initial;
           inset-inline-end: 16px;
           font-size: ${config.time_size}px;
+          text-align: right;
         }
-        .date-text {
+        .main .date-text {
           font-size: ${config.day_date_size}px;
           color: var(--secondary-text-color);
         }
@@ -18891,9 +18892,9 @@ renderMain({ config, sun, weather, temperature, feels_like, description } = this
         ${showTime ? x`
           <div class="current-time">
             <div id="digital-clock"></div>
-            ${showDay ? x`<div class="date-text day"></div>` : ''}
+            ${showDay ? x`<span class="date-text day"></span>` : ''}
             ${showDay && showDate ? x` ` : ''}
-            ${showDate ? x`<div class="date-text date"></div>` : ''}
+            ${showDate ? x`<span class="date-text date"></span>` : ''}
           </div>
         ` : ''}
       </div>
